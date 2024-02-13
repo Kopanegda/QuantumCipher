@@ -1,0 +1,50 @@
+import random
+
+import string
+
+
+
+def generate_random_words(num_words):
+
+    # Создаем пустой список для хранения случайных слов
+
+    words = []
+
+
+
+    # Генерируем случайные слова и добавляем их в список
+
+    for _ in range(num_words):
+
+        word = ''.join(random.choice(string.ascii_lowercase) for _ in range(random.randint(3, 10)))
+
+        words.append(word)
+
+
+
+    return words
+
+
+
+def main():
+
+    # Генерируем список из случайных слов
+
+    random_words = generate_random_words(5)
+
+
+
+    # Выводим список на экран
+
+    print("Случайные слова:")
+
+    for word in random_words:
+
+        print(word)
+
+
+
+if __name__ == "__main__":
+
+    main()
+
